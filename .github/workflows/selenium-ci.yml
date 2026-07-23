@@ -25,4 +25,4 @@ jobs:
         run: |
           sudo apt-get install -y xvfb        
           Xvfb :99 &
-          /home/runner/.local/bin/pytest tests/
+          python3 -m pytest tests/
