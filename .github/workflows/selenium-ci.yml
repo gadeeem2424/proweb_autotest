@@ -19,7 +19,7 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
           python -m pip install allure-pytest
-
+          python -m pip install --upgrade selenium
       - name: Run Tests
         env:
           DISPLAY: ":99"
