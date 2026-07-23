@@ -25,5 +25,5 @@ jobs:
         run: |
           sudo apt-get install -y xvfb        
           Xvfb :99 &
-          . venv/bin/activate || true
-              python -m pytest tests/
+          /home/runner/.local/bin/pytest tests/
+             
