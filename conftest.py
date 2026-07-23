@@ -21,7 +21,6 @@ def driver_edge():
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument("--window-size=1920,1080")
     driver = webdriver.Edge(options=options)
-    driver.maximize_window()
     driver.implicitly_wait(10)
     yield driver
     driver.quit()
