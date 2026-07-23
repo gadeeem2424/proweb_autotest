@@ -16,29 +16,34 @@ class LoginPage:
         self.confirm_1 = (By.CSS_SELECTOR, "#dialog > div > div > div > div.material-dialog__window-body.material-dialog__window-body_modify > div > div:nth-child(2) > div.drop-down-component__content > div.sessions__item-content > button")
 
     def change_language_ru(self):
-        wait = WebDriverWait(self.driver, 10)
-        wait.until(EC.element_to_be_clickable(self.language_ru)).click()
+        wait = WebDriverWait(self.driver, timeout=10)
+        element = wait.until(EC.element_to_be_clickable(self.language_ru))
+        self.driver.execute_script("arguments[0].click();", element)
 
     def enter_login(self, login):
         wait = WebDriverWait(self.driver, 10)
         wait.until(EC.presence_of_element_located(self.login)).send_keys(login)
 
     def click_btn_enter(self):
-        wait = WebDriverWait(self.driver, 10)
-        wait.until(EC.element_to_be_clickable(self.btn_enter)).click()
+        wait = WebDriverWait(self.driver, timeout=10)
+        element = wait.until(EC.element_to_be_clickable(self.btn_enter))
+        self.driver.execute_script("arguments[0].click();", element)
 
     def enter_password(self, password):
         wait = WebDriverWait(self.driver, 10)
         wait.until(EC.presence_of_element_located(self.password)).send_keys(password)
 
     def click_btn_login(self):
-        wait = WebDriverWait(self.driver, 10)
-        wait.until(EC.element_to_be_clickable(self.btn_login)).click()
+        wait = WebDriverWait(self.driver, timeout=10)
+        element = wait.until(EC.element_to_be_clickable(self.btn_login))
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_device_1(self):
-        wait = WebDriverWait(self.driver, 10)
-        wait.until(EC.element_to_be_clickable(self.device_1)).click()
+        wait = WebDriverWait(self.driver, timeout=10)
+        element = wait.until(EC.element_to_be_clickable(self.device_1))
+        self.driver.execute_script("arguments[0].click();", element)
 
     def click_confirm_1(self):
-        wait = WebDriverWait(self.driver, 10)
-        wait.until(EC.element_to_be_clickable(self.confirm_1)).click()
+        wait = WebDriverWait(self.driver, timeout=10)
+        element = wait.until(EC.element_to_be_clickable(self.confirm_1))
+        self.driver.execute_script("arguments[0].click();", element)
