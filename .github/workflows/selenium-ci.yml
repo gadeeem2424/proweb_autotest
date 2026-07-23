@@ -24,6 +24,6 @@ jobs:
         env:
           DISPLAY: ":99"
         run: |
-          sudo apt-get install -y xvfb MicrosoftEdge       
+          sudo apt-get install -y xvfb       
           Xvfb :99 &
           python -m pytest tests/
