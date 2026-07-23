@@ -25,4 +25,4 @@ jobs:
         run: |
           sudo apt-get install -y xvfb        
           Xvfb :99 & 
-         python -m pytest tests/
+              python -m pytest tests/
