@@ -10,7 +10,7 @@ packaging==26.2
 pluggy==1.6.0
 pycparser==3.0
 Pygments==2.20.0
-PySocks==1.7.
+PySocks==1.7.1
 pytest==9.1.1
 selenium==4.45.0
 sniffio==1.3.1
